@@ -13,14 +13,19 @@ pipeline {
             echo 'Starting Build'
           }
         }
-        stage('') {
+        stage('Step') {
           steps {
-            sh '''for(int i =0; i < 5; i++){
-echo \'Hello World\'
-}'''
-            }
+            sh '''max = 5
+for((i=2; i <= $max; ++i))
+
+do 
+
+echo "$i"
+
+done'''
           }
         }
       }
     }
   }
+}
